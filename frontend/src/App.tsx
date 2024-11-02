@@ -1,9 +1,10 @@
 import { Cross, Microphone } from "akar-icons"
 import { useState } from "react"
 import css from "./styles/App.module.css"
+import { Presidents } from "./util/Structs"
 
 export default function App() {
-    const [whoIsSpeaking, setWhoIsSpeaking] = useState<string | null>("donald")
+    const [whoIsSpeaking, setWhoIsSpeaking] = useState<Presidents | null>(null)
     const [isRecording, setIsRecording] = useState<boolean>(false)
 
     const handleMicButtonPress = () => {
