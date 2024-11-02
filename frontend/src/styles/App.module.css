@@ -1,0 +1,54 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@keyframes talkingAnim {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.2) rotate(2deg);
+  }
+  66% {
+    transform: scale(1.2) rotate(-2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+#root > img {
+  position: relative;
+  z-index: -1;
+  height: 85%;
+  object-fit: cover;
+  animation: talkingAnim 1s infinite;
+}
+
+#presidentsCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: none;
+  height: 85%;
+}
+
+#presidentsCont > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#recordButton {
+  height: 15%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: indigo;
+  transition: filter 0.3s ease 0s;
+}
+
+#recordButton:hover {
+  filter: brightness(0.7);
+}
