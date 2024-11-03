@@ -3,8 +3,9 @@ export enum Presidents {
   Donald = "donald",
   Barack = "barack",
 }
-
+/*
 interface VoiceSegment {
   voice: Presidents;
   file: string;
 }
+*/
